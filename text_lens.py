@@ -9,15 +9,10 @@ st.set_page_config(page_title="TextLens")
 st.title("Image text extraction(OCR model)")
 st.header("Model UI")
 
-# file_tab, camera_tab = st.tabs(["Files", "Camera"])
 
-# with file_tab:
 image_upload = st.file_uploader(
         "Please upload an image(with text)", type=["png", "jpg", "jpeg"]
     )
-
-# with camera_tab:
-#     camera_upload = st.camera_input("Take pic with phone")
 
 
 def extract_text():
@@ -27,15 +22,9 @@ def extract_text():
             "image": image_upload,
         },
     )
-    # text_extract = st.write_stream(text_extract)
     return text_extract
 
-# def extract_input():
-#     if camera_tab:
-#         extract_text(camera_upload)
-#     else:
-#         extract_text(image_upload)
-        
+
 
 if image_upload:
     if st.button("Extract text"):
@@ -54,11 +43,8 @@ if image_upload:
     st.success("Successful")
 
 
-# print(text_extract)
 
 
-# Footer
-st.write("")
 st.write("")
 st.write("")
 st.write("")
