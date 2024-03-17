@@ -2,3 +2,4 @@
 images
 text_lens_model.ipynb
 .ruff_cache
+.lens_venv
